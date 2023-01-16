@@ -9,12 +9,13 @@ import java.util.ArrayList; // import the ArrayList class
 public class calculator{
     public static void main(String[] arg){
  
-        JFrame frame = new JFrame("JFrame Example");  
+        JFrame frame = new JFrame("Calculator");  
         JPanel panel = new JPanel();  
         panel.setLayout(new FlowLayout());  
-        JLabel label = new JLabel("JFrame By Example");  
+        JLabel label = new JLabel("Calculator");  
         JButton button = new JButton();  
-        button.setText("Button");  
+        button.setText("1");  
+        button.setText("2"); 
         panel.add(label);  
         panel.add(button);  
         frame.add(panel);  
