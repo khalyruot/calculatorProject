@@ -5,10 +5,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.awt.event.*;
 
 //import java.util.ArrayList; // import the ArrayList class
 
-public class calculator {
+public class calculator implements ActionListener {
     public static void main(String[] arg) {
 
         JFrame frame = new JFrame("Calculator");
@@ -18,6 +19,11 @@ public class calculator {
         JTextField textField = new JTextField(10);
 
         JButton button1 = new JButton();
+        button1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                textField.setText("Welcome to Javatpoint.");
+            }
+        });
         JButton button2 = new JButton();
         JButton button3 = new JButton();
         JButton button4 = new JButton();
