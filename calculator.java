@@ -5,12 +5,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.event.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 //import java.util.ArrayList; // import the ArrayList class
 
 public class calculator implements ActionListener {
-    public static void main(String[] arg) {
+
+    JButton button;
+    JFrame frame;
+    JTextField textField;
+
+    public calculator() {
 
         JFrame frame = new JFrame("Calculator");
         JPanel panel = new JPanel();
@@ -19,11 +25,6 @@ public class calculator implements ActionListener {
         JTextField textField = new JTextField(10);
 
         JButton button1 = new JButton();
-        button1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                textField.setText("Welcome to Javatpoint.");
-            }
-        });
         JButton button2 = new JButton();
         JButton button3 = new JButton();
         JButton button4 = new JButton();
@@ -33,6 +34,7 @@ public class calculator implements ActionListener {
         JButton button8 = new JButton();
         JButton button9 = new JButton();
         button1.setText("1");
+        button1.addActionListener(this);
         button2.setText("2");
         button3.setText("3");
         button4.setText("4");
@@ -59,6 +61,11 @@ public class calculator implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Hello!");
     }
 
 }
