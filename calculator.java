@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 
 //import java.util.ArrayList; // import the ArrayList class
 
-public class calculator implements ActionListener {
+public class calculator extends JFrame implements ActionListener {
 
     JButton button;
     JFrame frame;
@@ -22,7 +22,8 @@ public class calculator implements ActionListener {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JLabel label = new JLabel("Calculator");
-        JTextField textField = new JTextField(10);
+
+        JTextField textField = new JTextField("hello", 10);
 
         JButton button1 = new JButton();
         JButton button2 = new JButton();
@@ -33,9 +34,11 @@ public class calculator implements ActionListener {
         JButton button7 = new JButton();
         JButton button8 = new JButton();
         JButton button9 = new JButton();
+
         button1.setText("1");
         button1.addActionListener(this);
         button2.setText("2");
+        button2.addActionListener(this);
         button3.setText("3");
         button4.setText("4");
         button5.setText("5");
@@ -43,6 +46,7 @@ public class calculator implements ActionListener {
         button7.setText("7");
         button8.setText("8");
         button9.setText("9");
+
         panel.add(label);
         panel.add(textField);
         panel.add(button1);
@@ -63,9 +67,14 @@ public class calculator implements ActionListener {
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println("Hello!");
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+     */
+    public void actionPerformed(ActionEvent a) {
+        System.out.println("1");
     }
 
 }
